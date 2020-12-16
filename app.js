@@ -2,56 +2,56 @@
 const projectArray = [
     {
         title:"Simple Calculator",
-        img:"/img/Calculator.png",
-        live:'/pages/Simple-Calculator-main/index.html',
+        img:"img/Calculator.png",
+        live:'pages/Simple-Calculator-main/index.html',
         github:'https://github.com/JorganBonstragel/Simple-Calculator',
         text:"A vanilla javascript calculator featuring a light and dark mode for extra flair",
-        icon: "/icons/calculator.svg",
+        icon: "icons/calculator.svg",
         tags:['css', 'javascript', 'html'],
     },
     {
         title:"Web Dashboard",
-        img:"/img/Dashboard.png",
-        live:'/pages/Dashboard-main/index.html',
+        img:"img/Dashboard.png",
+        live:'pages/Dashboard-main/index.html',
         github:'https://github.com/JorganBonstragel/Dashboard',
         text:"A web dashboard using Chart.js and simulated data to create charts, graphs, and alerts",
-        icon: "/icons/chart.svg",
+        icon: "icons/chart.svg",
         tags:['mobile-first', 'css', 'javascript', 'html'],
     },
     {
         title:"Game Show App",
-        img:"/img/Gameshow.png",
-        live:'/pages/Game-Show-App-main/index.html',
+        img:"img/Gameshow.png",
+        live:'pages/Game-Show-App-main/index.html',
         github:'https://github.com/JorganBonstragel/Game-Show-App',
         text:'A "Hangman" style game where you guess the secret phrase, using vanilla javascript.',
-        icon: "/icons/puzzle.svg",
+        icon: "icons/puzzle.svg",
         tags:['javascript', 'css', 'html'],
     },
     {
         title:"Employee Directory",
-        img:"/img/EmployeeDir.png",
-        live:'/pages/Employee-Directory-main/index.html',
+        img:"img/EmployeeDir.png",
+        live:'pages/Employee-Directory-main/index.html',
         github:'https://github.com/JorganBonstragel/Employee-Directory',
         text:"A twelve person directory using fetch to pull user data from a random user API, also features a modal to flip through users.",
-        icon: "/icons/users.svg",
+        icon: "icons/users.svg",
         tags:['javascript', 'css', 'html'],
     },
     {
         title:"Chat App",
-        img:"/img/ChatApp.png",
-        live:'/pages/Chat-App-main/index.html',
+        img:"img/ChatApp.png",
+        live:'pages/Chat-App-main/index.html',
         github:'https://github.com/JorganBonstragel/Chat-App',
         text:"A chat app mockup that just writes user input to the chat history",
-        icon: "/icons/comments.svg",
+        icon: "icons/comments.svg",
         tags:['css', 'javascript', 'html'],
     },
     {
         title:"Photo Gallery",
-        img:"/img/Gallery.png",
-        live:'/pages/Photo-Gallery-main/index.html',
+        img:"img/Gallery.png",
+        live:'pages/Photo-Gallery-main/index.html',
         github:'https://github.com/JorganBonstragel/Photo-Gallery',
         text:"A small photo gallery with using BaguetteBox.js and a custom javascript search function.",
-        icon: "/icons/photo.svg",
+        icon: "icons/photo.svg",
         tags:['javascript', 'css', 'html'],
     }
      
@@ -109,7 +109,7 @@ window.onresize = () => {
 // check for normal resolution or high resolution screens
 function adjustBackground(){
     if(screenWidth > 1080){
-        document.body.style.background = "url(/img/circlesHighRes.png)"
+        document.body.style.background = "url(img/circlesHighRes.png)"
     }
 }
 
