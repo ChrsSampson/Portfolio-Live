@@ -73,7 +73,7 @@ projectArray.forEach(item => {
         <p>${item.text}</p>
         <div class="tag-container">${tags}</div>
         <div class="card-link-container">
-            <div class="demo-link"><img class="live-icon" src="icons/demo.svg"><a href=${item.live} class="card-link">Live Demo</a></div>
+            <div class="demo-link"><img class="live-icon" src=${item.icon}><a href=${item.live} class="card-link">Live Demo</a></div>
             <div class="source-link"><img class="live-icon" src="icons/github.svg"><a href=${item.github} class="card-link">Source Code</a></div>
         </div>
     </article>
