@@ -2,7 +2,7 @@
 const projectArray = [
     {
         title:"Simple Calculator",
-        img:"img/Calculator.png",
+        img:"img/Calculator",
         live:'pages/Simple-Calculator-main/index.html',
         github:'https://github.com/JorganBonstragel/Simple-Calculator',
         text:"A vanilla javascript calculator featuring a light and dark mode for extra flair",
