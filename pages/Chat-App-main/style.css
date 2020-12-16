@@ -1,0 +1,165 @@
+
+body{
+    background-color: #1a354c;
+}
+
+
+
+li, h2, span, input{
+    font-family: 'Varela Round', Arial, Helvetica, sans-serif;
+}
+
+/*-------wrappers-----*/
+.app-wrapper{
+    margin:0 auto;
+    max-width: 800px;
+    position: relative;
+    top:150px;
+    box-shadow: 12px 12px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.app-container{
+    padding:10px;
+    border-radius: 0 0 10px 10px;
+    background-color: #657383;
+
+    display:grid;
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 400px auto;
+    grid-template-areas:
+    "contacts chat"
+    "contacts input"
+    ;
+}
+
+
+/*-------bar-----*/
+.bar{
+    height:31px;
+    border-radius:10px 10px 0 0;
+    background-color: coral;
+}
+.btn-container{
+    position: absolute;
+    top:5px;
+    margin-top: 0px;
+    margin-left:10px;
+
+    list-style: none;
+    padding-left:0;
+}
+.btn-container li{
+    display:inline-block;
+}
+.nav-btn{
+    border-radius: 50%;
+    height:15px;
+}
+#btn-red{
+    background-color: #ff6159;
+    border:1px solid white;
+}
+#btn-yellow{
+    background-color:#ffbd2f;
+    border:1px solid white;
+}
+#btn-green{
+    background-color: #25c33e;
+    border:1px solid white;
+}
+/*-------contacts-----*/
+.contacts-container{
+    grid-area: contacts;
+    border-radius: 10px;
+    background-color: white;
+}
+.contacts{
+    overflow: scroll;
+    max-height: 415px;
+}
+.contact-list{
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+
+}
+
+.contact-header{
+    text-align: center;
+    background-color: coral;
+    border-radius: 10px 10px 0 0;
+}
+.contact-header h2{
+    padding-top:3px;
+    margin:0;
+    color:white;
+
+}
+/*-------chat-----*/
+.chat-container{
+    grid-area: chat;
+    border-radius: 10px;
+    background-color: white;
+}
+.chat-history{
+    position: relative;
+    top:10px;
+    overflow-y: auto;
+    max-height: 375px;
+}
+
+/*-------input-----*/
+.input-container{
+    grid-area: input;
+}
+#user-input{
+    min-width: 88%;
+    border-radius: 10px;
+    border:2px solid coral;
+    padding:5px 8px 5px 8px;
+    font-size: large;
+    transition: background,border 500ms;
+}
+#send{
+    background-color: transparent;
+    border: none;
+}
+i{
+    color:#6cf370;
+}
+/*--------Generated Content Styles----------*/
+
+/*-----Generated Message Style-------*/
+.message{
+    border-bottom:3px solid slategray;
+    padding: 5px 0px 5px 15px;
+
+}
+.message:nth-child(even){
+    background-color: rgb(170, 153, 175);
+}
+.username{
+  font-size: bold;
+    margin: 0;
+}
+.message span{
+    padding-left:40px;
+
+}
+/*--Generated Contacts Style---*/
+.contact-list li{
+    padding:5px;
+
+}
+
+
+/*---------Animations and transitions----*/
+
+#user-input:focus{
+    background-color: rgb(252, 205, 189);
+    border-color: white;
+}
+.contact-list li:hover{
+    background-color: cornflowerblue;
+}

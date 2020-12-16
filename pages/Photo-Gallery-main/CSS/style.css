@@ -1,0 +1,56 @@
+/* Root Properties  */
+*{
+  box-sizing: border-box;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+/*------Search Bar--------*/
+.search-wrapper{
+  margin:0 auto;
+  width:80%;
+  display:flex;
+  place-items: center;
+  height:10em;
+ 
+}
+
+#user_search{
+  margin:0 auto;
+  width: 50%;
+  height: 4em;
+  border: solid 4px #5fcf80;
+  border-radius: 20px;
+  text-align: center;
+  font-size: large;
+  transition: 1s;
+}
+
+/* ------Grid----------- */
+.gallery {
+  margin:0 auto;
+  max-width: 75%;
+  display: grid;
+  grid-row-gap: .5em;
+  grid-column-gap: .5em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, .5fr));
+  justify-items: center;
+}
+
+.gallery img{
+  max-width:250px;
+  max-height: 250px;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+
+/* ----transitions and animations----*/
+#user_search:focus{
+  background:#d9f1f7;
+  border-color:#39f79e;
+  color: #939394;
+}
+
+img:hover{
+  transform:  scale(1.05);
+}
