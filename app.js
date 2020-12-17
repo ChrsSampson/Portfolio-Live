@@ -2,7 +2,7 @@
 const projectArray = [
     {
         title:"Simple Calculator",
-        img:"img/Calculator.PNG",
+        img:"img/Calculator.png",
         live:'pages/Simple-Calculator-main/index.html',
         github:'https://github.com/JorganBonstragel/Simple-Calculator',
         text:"A vanilla javascript calculator featuring a light and dark mode for extra flair",
@@ -11,7 +11,7 @@ const projectArray = [
     },
     {
         title:"Web Dashboard",
-        img:"img/Dashboard.PNG",
+        img:"img/Dashboard.png",
         live:'pages/Dashboard-main/index.html',
         github:'https://github.com/JorganBonstragel/Dashboard',
         text:"A web dashboard using Chart.js and simulated data to create charts, graphs, and alerts",
@@ -20,7 +20,7 @@ const projectArray = [
     },
     {
         title:"Game Show App",
-        img:"img/Gameshow.PNG",
+        img:"img/Gameshow.png",
         live:'pages/Game-Show-App-main/index.html',
         github:'https://github.com/JorganBonstragel/Game-Show-App',
         text:'A "Hangman" style game where you guess the secret phrase, using vanilla javascript.',
@@ -29,7 +29,7 @@ const projectArray = [
     },
     {
         title:"Employee Directory",
-        img:"img/EmployeeDir.PNG",
+        img:"img/EmployeeDir.png",
         live:'pages/Employee-Directory-main/index.html',
         github:'https://github.com/JorganBonstragel/Employee-Directory',
         text:"A twelve person directory using fetch to pull user data from a random user API, also features a modal to flip through users.",
@@ -38,7 +38,7 @@ const projectArray = [
     },
     {
         title:"Chat App",
-        img:"img/ChatApp.PNG",
+        img:"img/ChatApp.png",
         live:'pages/Chat-App-main/index.html',
         github:'https://github.com/JorganBonstragel/Chat-App',
         text:"A chat app mockup that just writes user input to the chat history",
@@ -47,7 +47,7 @@ const projectArray = [
     },
     {
         title:"Photo Gallery",
-        img:"img/Gallery.PNG",
+        img:"img/Gallery.png",
         live:'pages/Photo-Gallery-main/index.html',
         github:'https://github.com/JorganBonstragel/Photo-Gallery',
         text:"A small photo gallery with using BaguetteBox.js and a custom javascript search function.",
@@ -73,8 +73,8 @@ projectArray.forEach(item => {
         <p>${item.text}</p>
         <div class="tag-container">${tags}</div>
         <div class="card-link-container">
-            <div class="demo-link"><img class="live-icon" src=${item.icon}><a href=${item.live} class="card-link">Live Demo</a></div>
-            <div class="source-link"><img class="live-icon" src="icons/github.svg"><a href=${item.github} class="card-link">Source Code</a></div>
+            <div class="demo-link"><img class="live-icon" src="/icons/demo.svg"><a href=${item.live} class="card-link">Live Demo</a></div>
+            <div class="source-link"><img class="live-icon" src="/icons/github.svg"><a href=${item.github} class="card-link">Source Code</a></div>
         </div>
     </article>
     `
@@ -86,18 +86,24 @@ projectArray.forEach(item => {
 
 
 // Element Selectors
-const contactBtn = document.getElementById('contact-btn')
-const pageGrid = document.getElementById('page-wrapper')
-const contactPanel = document.getElementById('contacts')
-const projectBtn = document.getElementById('project-btn')
-const cardlist = document.getElementById('card-list')
+const bannerContainer = document.getElementById('banner-container')
+const contactBtn = document.getElementById('contact-btn');
+const contactExit = document.getElementById('contact-exit');
+const pageGrid = document.getElementById('page-wrapper');
+const contactPanel = document.getElementById('info-section');
+const projectBtn = document.getElementById('project-btn');
+const cardlist = document.getElementById('card-list');
+const navbox = document.getElementById('nav-checkbox');
+const skype = document.getElementById('skype');
+const skypeInfo = document.getElementById('skype-info');
 
 // Global Variables
-let screenWidth = window.screen.width
+let screenWidth = window.screen.width;
 
 // Initialization functions
 window.addEventListener('DOMContentLoaded', ()=>{
-    adjustBackground();    
+    adjustBackground();
+    
 })
 
 // refresh screenWidth on resize
@@ -108,63 +114,44 @@ window.onresize = () => {
 
 // check for normal resolution or high resolution screens
 function adjustBackground(){
-    if(screenWidth > 1080){
+    if(screenWidth > 1921){
         document.body.style.background = "url(img/circlesHighRes.png)"
     }
+    else{
+        document.body.style.background = "url(img/circles.png)"
+    }
+  
 }
 
+// Contact Panel expand
+contactBtn.onclick = () => {
+    contactPanel.classList.toggle("collpasedWidth")
+     
+}
+// close panel
+contactExit.onclick = () => {
+    contactPanel.classList.toggle('collpasedWidth');
+}
 
-// Contact Panel Collapse
-contactBtn.addEventListener('click', () => {
-    if(screenWidth < 768){
-        if(pageGrid.style.gridTemplateColumns == "50% 50%"){
-                pageGrid.style.gridTemplateColumns = "0% 100%"
-                contactPanel.webkitTransition = "300ms ease-in-out"
-                contactPanel.classList.remove('.showWidth')
-                contactPanel.classList.add('collapsedWidth')
-        }
-        else{
-                pageGrid.style.gridTemplateColumns = "50% 50%"
-                contactPanel.classList.add('.showWidth')
-                contactPanel.classList.remove('collapsedWidth')
-        }
-    }
-    if(screenWidth >= 768 && screenWidth < 1024){
-        if(pageGrid.style.gridTemplateColumns == "30% 70%"){
-                pageGrid.style.gridTemplateColumns = "0% 100%"
-                contactPanel.classList.remove('.showWidth')
-                contactPanel.classList.add('collapsedWidth')
-        }
-        else{
-                pageGrid.style.gridTemplateColumns = "30% 70%"
-                contactPanel.classList.add('.showWidth')
-                contactPanel.classList.remove('collapsedWidth')
-        }
-    }
-    if(screenWidth >= 1024){
-        if(pageGrid.style.gridTemplateColumns == "20% 80%"){
-                pageGrid.style.gridTemplateColumns = "0% 100%"
-                contactPanel.classList.remove('.showWidth')
-                contactPanel.classList.add('collapsedWidth')
-        }
-        else{
-                pageGrid.style.gridTemplateColumns = "20% 80%"
-                contactPanel.classList.add('.showWidth')
-                contactPanel.classList.remove('collapsedWidth')
-        }
-    }        
-})
+// skype garbage (I hate social media)
+skype.onclick = () =>{
+    skypeInfo.style.opacity = "1"
+}
 
 // Show Project cards (One way Toggle)
-projectBtn.addEventListener('click', ()=>{
-        console.log('click')
-        pageGrid.style.gridTemplateRows = "50px 50vh auto"
-        cardlist.style.visibility = "visible"
+projectBtn.onclick = () => {
+
+        console.info("pizza time")
+
+        cardlist.classList.toggle('collpasedVertical');
+        
         if(screenWidth >= 768){
-        const footer = document.querySelector('footer')
+        const footer = document.querySelector('footer');
         footer.scrollIntoView();
         }
         else{
             cardlist.children[0].scrollIntoView();
         }
-})
+
+        bannerContainer.classList.toggle("banner-resize");
+}

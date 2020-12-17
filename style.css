@@ -11,7 +11,7 @@
 
     --body-bg: rgb(31, 33, 54);
     --nav-bg:rgba(61, 124, 149, 0.616);
-    --banner-bg: rgb(80, 56, 119);
+    --banner-bg: rgba(96, 136, 209, 0.698);
     --contact-bg: rgb(110, 110, 110);
     --card-list-bg: rgb(255, 255, 255);
     --card-bg-mobile: rgb(70, 141, 168);
@@ -42,56 +42,66 @@ body{
     margin:0px;
     padding:0px;
     font-family: var(--primary-font);
-    background: url(img/circles.png);
+    background: url(/img/circles.png);
     color:var(--primary-text-color);
 }
 
 /* Layout */
 #page-wrapper{
-    display: grid;
-    grid-template-columns:0% 100%;
-    grid-template-rows: 50px 100vh 0px;
-    grid-template-areas: 
-    "nav nav"
-    "contact banner"
-    "contact cards"
-    ;
+    display:flex;
+    flex-direction: column;
 
-    --webkit-transition: 400ms cubic-bezier(.57,-0.43,.36,1.4);
+    height:100vh;
+
     transition: 400ms cubic-bezier(.57,-0.43,.36,1.4);
 }
 
 /* navigation bar */
 #nav{
-    grid-area: nav;
+    display: grid;
+    place-items: center;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    height:70px;
+    width: 70px;
 
-    background: var(--nav-bg);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.582);
+    margin:5px;
+    border-radius: 10px;
+    border:1px solid white;
+    background-color: var(--nav-bg);
+    transition: 400ms cubic-bezier(.57,-0.43,.36,1.4);
+}
+#contact-btn{
+    width:100%;
+    text-align: center;
+    
+    transition: transform 400ms ease-in-out;
 }
 .nav-link{
-    margin-top: 12px;
-    margin-right: 20px;
     font-size: 20px;
+    padding:20px 0px 20px 0px;
     text-decoration: none;
     color: var(--primary-text-color);
-}
-.nav-link:last-child{
-    margin-right: 0px;
+    transition: color 400ms ease;
 }
 .nav-link:hover{
+    transform: scale(1.2);
     color:var(--accent-text-color);
-    transition: 300ms ease;
+    transition: color 400ms ease;
+}
+#nav:hover{
+    border-radius: 50%;
+    transition: 400ms cubic-bezier(.57,-0.43,.36,1.4);
 }
 
 /* Banner Container */
 #banner-container{
-    grid-area: banner;
-
     display: grid;
     place-items: center;
+   
+    height:80vh;
+
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
 }
 /* Banner Content */
 #banner{
@@ -103,7 +113,7 @@ body{
     border-radius: 10px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.582);
     border:1px solid white;
-    background-color: var(--nav-bg);
+    background-color: var(--banner-bg);
     text-align: center;
 }
 #banner h1{
@@ -137,32 +147,53 @@ body{
     animation-fill-mode: forwards;
 }
 .banner-link:hover > i{
-    transform: translateY(35px);
+    transform: translateY(50px);
     transition: 300ms ease-in-out;
 }
 
-
 /* SideBar */
-#contacts{
-    grid-area: contact;
+.info-section{
+    position: absolute;
+    top: 0px;
 
     display: flex;
     flex-direction: column;
-    
+
+    width: 50%;
+    height: 100vh;
     overflow: hidden;
 
-    padding-top: 15px;
     font-size: 11px;
     box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.582);
-    background: url(img/background.png);
-    transition: 400ms cubic-bezier(.73,-0.34,.46,1.35)
-}
-#contacts h2{
-    text-align: right;
-    padding-right: 5px;
+    background: url(/img/background.png);
+
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
+} 
+.info-section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
     border-bottom: 1px solid white;
+    background-color: var(--banner-bg);
+    margin-bottom: 15px;
+}
+
+.exit{
+    font-size: 20px;
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
+}
+.exit:hover{
+    color:red;
+    transform: rotate(180deg) scale(1.4);
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
+}
+
+.info-section h2{
+    text-align: right;
+    padding:15px;
+   
     margin:2px;
-    margin-bottom: 10px;
 }
 .contact-info{
     font-size: 13px;
@@ -176,33 +207,70 @@ body{
 }
 .email-btn{
     background-color: var(--nav-bg);
-    width: 40%;
+    width: 60%;
+    text-align: center;
     border-radius: 10px;
     border:1px solid white;
     padding:1rem;
     margin:0 auto;
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
 }
-#contacts button{
+.social-container{
+    border-top: 1px solid white;
+    background: linear-gradient(rgba(62, 76, 148, 0.363), transparent);
+}
+.social-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 3em;
+   
+}
+.social-link{
+    height:3em;
+    width:3em;
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
+}
+.icon-nonlink{
+    opacity: 0;
+    position: relative;
+    top: -25px;
+    margin:0 auto;
+    transition: 300ms ease;
+}
+.article-header{
+    text-align: center;
+}
+.text-content p{
+    font-family: var(--secondary-font);
+    line-height: 1.5;
+    font-weight: 300;
+    padding: 0px 20px 0px 20px;
+}
+.info-section button{
     margin:0 auto;
 }
-.contact-link:hover{
-    color:white;
+.social-link:hover{
+    transform:scale(1.3);
+    filter: invert(1);
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
 }
 .email-btn:hover{
+    content: "csamposn@gmail.com";
     background-color: var(--card-bg-mobile);
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
 }
 
 /* Card Container */
-#card-list{
-    grid-area: cards;
-
-    visibility: hidden;
-
+.card-list{
     display: flex;
     flex-direction: column;
 
     overflow-x: auto;
-    height: 100%;
+    height: 800px;
+
+    transition: 400ms cubic-bezier(.57,-0.43,.36,1.4);
 }
 /* Card layout */
 .card{
@@ -211,7 +279,7 @@ body{
     place-items: center;
     
     text-align: center;
-    
+    max-height: 400px;
     border-top:2px solid var(--accent-text-color);    
     background-color: var(--card-bg-mobile);
 }
@@ -232,7 +300,7 @@ body{
     border-radius: 10px;
 
     box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.582);
-    background: url(img/background.png);
+    background: url(/img/background.png);
 
     transition: 400ms cubic-bezier(.73,-0.34,.46,1.35)
 }
@@ -260,6 +328,7 @@ body{
     justify-content: space-around;
     padding-bottom: 5px;
 
+    border-radius: 0px 0px 10px 10px;
     background: rgba(51, 106, 128, 0.842);
 }
 .card-link{
@@ -290,11 +359,15 @@ body{
 @media(min-width: 768px){
     
     /* Contact panel adjustments */
-    #contacts{
+    #info-section{
+        width: 40%;
         font-size: 16px;
     }
-    #contacts a{
+    #info-section a{
         font-size: 15px;
+    }
+    .exit{
+        font-size: 25px;
     }
     /* Scroll bar Style for horizantal  card mode */
 
@@ -329,12 +402,16 @@ body{
 
 /* Desktop Screen Size */
 @media(min-width: 1024px){
-    #contacts h2{
+    #info-section{
+        width: 30%;
+    }    
+    #info-section h2{
         font-size: 24px;
     }
-    #contacts a{
+    #info-section a{
         font-size: 20px;
     }
+    
     #card-list{
         padding:10px;
         padding-top: 20px;
@@ -346,7 +423,7 @@ body{
 
 /* High Resolution Desktop Screen Size */
 @media(min-width: 1921px){
-    #contacts{
+    #info-section{
         font-size: 20px;
     }
     #card-list{
@@ -380,15 +457,21 @@ body{
     }
 }
 
-/* Tranitions Fixes for chrome (I hate my life) */
+/* Chrome Transition Fixes.....Mostly */
 
-.collapsedWidth{
-    max-width: 0px;
-    --webkit-transition:400ms ease-in-out;
-    transition: 400ms ease-in-out;
+.collpasedWidth{
+    /* visibility: hidden !important; */
+    max-width: 0% !important;
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4) !important;  
 }
-.showWidth{
-    max-width: 100%;
-    --webkit-transition:400ms ease-in-out;
-    transition: 400ms ease-in-out;
+
+.banner-resize{
+    height: 35vh !important;
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
+}
+
+.collpasedVertical{
+    visibility: hidden !important;
+    max-height: 0% !important;
+    transition: 300ms cubic-bezier(.57,-0.43,.36,1.4);
 }
