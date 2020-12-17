@@ -2,7 +2,7 @@
 const projectArray = [
     {
         title:"Simple Calculator",
-        img:"img/Calculator.png",
+        img:"img/Calculator.PNG",
         live:'pages/Simple-Calculator-main/index.html',
         github:'https://github.com/ChrsSampson/Simple-Calculator',
         text:"A vanilla javascript calculator featuring a light and dark mode for extra flair",
@@ -11,7 +11,7 @@ const projectArray = [
     },
     {
         title:"Web Dashboard",
-        img:"img/Dashboard.png",
+        img:"img/Dashboard.PNG",
         live:'pages/Dashboard-main/index.html',
         github:'https://github.com/ChrsSampson/Dashboard',
         text:"A web dashboard using Chart.js and simulated data to create charts, graphs, and alerts",
@@ -20,7 +20,7 @@ const projectArray = [
     },
     {
         title:"Game Show App",
-        img:"img/Gameshow.png",
+        img:"img/Gameshow.PNG",
         live:'pages/Game-Show-App-main/index.html',
         github:'https://github.com/ChrsSampson/Game-Show-App',
         text:'A "Hangman" style game where you guess the secret phrase, using vanilla javascript.',
@@ -29,7 +29,7 @@ const projectArray = [
     },
     {
         title:"Employee Directory",
-        img:"img/EmployeeDir.png",
+        img:"img/EmployeeDir.PNG",
         live:'pages/Employee-Directory-main/index.html',
         github:'https://github.com/ChrsSampson/Employee-Directory',
         text:"A twelve person directory using fetch to pull user data from a random user API, also features a modal to flip through users.",
@@ -38,7 +38,7 @@ const projectArray = [
     },
     {
         title:"Chat App",
-        img:"img/ChatApp.png",
+        img:"img/ChatApp.PNG",
         live:'pages/Chat-App-main/index.html',
         github:'https://github.com/ChrsSampson/Chat-App',
         text:"A chat app mockup that just writes user input to the chat history",
@@ -47,7 +47,7 @@ const projectArray = [
     },
     {
         title:"Photo Gallery",
-        img:"img/Gallery.png",
+        img:"img/Gallery.PNG",
         live:'pages/Photo-Gallery-main/index.html',
         github:'https://github.com/ChrsSampson/Photo-Gallery',
         text:"A small photo gallery with using BaguetteBox.js and a custom javascript search function.",
