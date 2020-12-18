@@ -2,7 +2,7 @@
 const projectArray = [
     {
         title:"Meal Planner",
-        img:"img/Meal.PNG",
+        img:"img/Meal.png",
         live:'pages/Meal-Planner/index.html',
         github:'https://github.com/ChrsSampson/Meal-Planner',
         text:"An experimental app that suggests random meals with users that are saved to local storage.",
