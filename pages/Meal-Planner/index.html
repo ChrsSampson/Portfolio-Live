@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodify</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round|Courgette&display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <main>
+      <h1 class="headline">Welcome to Foodify</h1>
+      <p class="tagline">Get ready to view some of your options for today.</p>
+      <section class="btn-container" id="btn-container">
+        <button class="btn" id="newUser">New User</button>
+        <button class="btn" id="loginButton">Log In</button>
+        <button class="btn hidden" id="startButton">Get Started</button>
+        <button class="btn hidden" id="resetButton" href="#">Select Another User</button>
+      </section>
+      
+      <section class="plan hidden">
+        <ul class ="users hidden" id="users">
+        <span>Select User</span>
+        </ul>
+
+        <ul class="hidden" id="meals">
+
+        </ul>
+      </section>
+
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
