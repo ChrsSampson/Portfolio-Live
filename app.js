@@ -142,11 +142,6 @@ contactExit.onclick = () => {
     contactPanel.classList.toggle('collpasedWidth');
 }
 
-// skype garbage (I hate social media)
-skype.onclick = () =>{
-    skypeInfo.style.opacity = "1"
-}
-
 // Show Project cards (One way Toggle)
 projectBtn.onclick = () => {
 
