@@ -2,108 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awsome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <!-- Normalizer -->
-    <link rel="stylesheet" href="./css/normalize.css">
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="./css/newstyle.css">
-    <!-- AOS.js stylesheet -->
-    <link rel="stylesheet" href="./css/aos.css">
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Chris Sampson Portfolio</title>
 </head>
 <body>
-    
-    <main id="page-wrapper" class="page-wrapper">
-        
-        <section id="banner-container" class="banner-container">
-            <div class="nav-bar">
-                <button class="nav-btn frosted" href="#bottomOfPage">Contact Me</button>
-                <button class="nav-btn frosted">About</button>
-            </div>
-            <div id="banner" class="banner frosted">
-                <h1>Chris Sampson</h1>
-                <span class="job-title"> &lt;Front End Developer&gt;</span>
-                <a class="nav-link banner-link" id="project-btn">See what I've been working on<br>
-                <i class="fas fa-chevron-down banner-link"></i></a>
-            </div>
+    <main class="page-wrapper">
+        <section class="scroll-container landing">
+            <article class="nav-bar">
+                <a class="nav-link-light">Projects</a>
+                <a class="nav-link-light">About</a>
+                <a class="nav-link-light">Contact Me</a>
+            </article>
+            <article class="banner frosted drop-shadow">
+                <h2>Chris Sampson</h2>
+                <span class="typing-animation">&lt;Front End Developer&gt;</span>
+                <div class="banner-link">
+                    <a>See What I have been working on</a>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                </div>
+            </article>
         </section>
 
-<<<<<<< Updated upstream
-
-        <section id="info-section" class="info-section collpasedWidth">
-            <header>
-                <i class="fas fa-times exit" id="contact-exit"></i>
-                <h2>Personal Info</h2>
-            </header>
-            <article class="text-content">
-                <h3 class="article-header">Hello, Here's a little about me..</h3>
-                <p>My name is Chris. I have around 10 years of experience as a System and Network Administrator. I am Currently pursueing a position as a Front-end Web Developer following my completiong of the Team Treehouse Tech Degree. I have am also Currecntly enrolled in the Team Treehouse Full-Stack Program to further my skills. If you like what you see I can be contacted on any of the platforms below, but email is prefered.</p>
+        <section class="scroll-container about">
+            <article>
+                <h3>About Me</h3>
+                <p>This will be some text about me</p>
             </article>
-            <article class="social-container">
-                <h3 class="article-header">Social Links</h3>
-                <div class="social-links">
-                    <a class="social-link" href="https://github.com/ChrsSampson?tab=repositories"><img src="icons/github2.svg"></a>
-                    <a class="social-link " id="skype" href="#"><img src="icons/skype.svg"></a>
-                    <a class="social-link" href="https://www.facebook.com/chris.sampson.129"><img src="icons/facebook.svg"></a>
-                </div>
-            </article>
-            <span class="icon-nonlink" id="skype-info">live:8bf24afa3921a16f</span>
-            <a class="nav-link email-btn"href="mailto:csamposn@gmail.com">Contact Me <i class="far fa-paper-plane"></i></a>
-=======
-        <section id="info-section" class="info-container">
-            <article class="about-container">
-                <div class="title">
-                    <h3>About Me</h3>
-                </div>
-                <div class="frosted content drop-shadow">
-                    <div>
-                        <p>
-                            My name is Chris. I have around 10 years of experience as a System and Network Administrator planning, implementing, and even building tools and systems to improve company workflows. I am currently pursueing a position as a Web Developer following my completion of the Team Treehouse Front End Development Tech Degree. I have am also currently working on other personal projects to practice and improve my skills. Below you can see some of the projects I have been developing.
-                        </p>
-                    </div>
-                </div>
-            </article>
->>>>>>> Stashed changes
         </section>
 
-        <section class="project-container">
-            <div class="title">
-                <h3>Projects</h3>
-            </div>
-            <div class="card-container">
-            <!--Cards generated by JS-->
-            </div>
-            
-            <div>
-                <button>Next</button>
-                <button>Previous</button>
-            </div>
+        <section class="scroll-container projects">
+            <h3>Projects</h3>
+        </section>
+
+        <section class="scroll-container contact">
+            <form class="contact-form drop-shadow">
+                <h3>Contact Me</h3>
+                <input type="text" placeholder="Enter Your Name">
+                <input type="text" placeholder="Enter Your Email">
+                <textarea placeholder="Enter Your Message Here"></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <footer class="drop-shadow">
+                <h3>This is the footer</h3>
+            </footer>
         </section>
     </main>
-
-    <footer id="bottomOfPage">
-        <!-- Form Submitted to FormSpree -->
-        <legend>
-            <h3>Contact Me</h3>
-            <form method="POST" action="https://formspree.io/f/xdoyovqe">
-                <input type="text">
-                <input type="text">
-                <textarea></textarea>
-                <button type="">Submit</button>
-            </form>
-        </legend>
-        <div>
-            give that guy credit for photo
-        </div>
-    </footer>
-
-<script src="js/app.js"></script>
+<script src="app.js"></script>
 </body>
-<<<<<<< Updated upstream
-<script src="app.js"></script>  
 </html>
-=======
-</html>
->>>>>>> Stashed changes

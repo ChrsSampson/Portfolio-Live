@@ -1,0 +1,216 @@
+/* -----------------Imports---------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Raleway:wght@100;400&display=swap');
+/* ------------------Root----------------------- */
+/* -------------------------------------------- */
+:root{
+    --primary-font:'Raleway', sans-serif;
+    --secondary-font:'Fira Code', monospace;
+
+    --primary-color: hsl(359, 23%, 51%);
+    --secondary-color:rgb(27, 117, 161);
+    --accent-color:hsl(0, 0%, 65%);
+    --accent-color2: hsl(16, 13%, 28%);
+}
+body{
+    margin:0px;
+    font-family:var(--primary-font);
+}
+
+/* ------------------Class Styles----------------------- */
+/* ----------------------------------------------------- */
+
+
+/* -------------------Layout---------------------------- */
+.page-wrapper{
+    scroll-snap-type: y mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+.scroll-container{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height:100vh;
+    margin-bottom: 0px;
+}
+footer{
+    position: relative;
+    bottom: -12em;
+    height:10em;
+    background-color: wheat;
+}
+/* ------------------Containers----------------------- */
+.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-image: url(./img/Laptop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.projects{
+    background-color: var(--primary-color);
+}
+.about{
+    background-color: var(--secondary-color);
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image:url(./img/math-6GDW9BVdmkw-unsplash.jpg);
+    background-position: center;
+    background-size:cover;   
+}
+.nav-bar{
+    margin:0 auto;
+    position: relative;
+    top:-35%;
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 50%;
+    min-width: 16em;
+    margin:0 auto;
+    border-radius: 1em;
+    padding:1em;  
+}
+/* ------------------Components----------------------- */
+/* ----Anchor Elements----- */
+.nav-link-light{
+    color:white;
+    border:1px solid white;
+    border-radius:1em;
+    padding:.25em;
+    cursor: pointer;
+}
+.nav-link-light:hover{
+    background-color:hsla(0, 0%, 100%, 0.37);
+}
+
+/* ----Icons and SVG Elements----- */
+.icon-small{
+    height:1em;
+}
+
+/* ----Special Banner link----- */
+.banner-link{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-top:.5em;
+    transition: animation 400ms ease-in-out;
+    opacity: 0;
+    animation: 1s 2.5s FadeIn;
+    animation-fill-mode: forwards;
+    
+}
+.banner-link:hover{
+    color:white;
+}
+.banner-link:hover > svg{
+    transform: translateY(2.5em);
+    transition: transform 300ms cubic-bezier(.67,-0.28,.43,1.33);
+}
+.banner-link svg{
+    transition: transform 300ms cubic-bezier(.67,-0.28,.43,1.33);
+    height: 1em;
+}
+
+/* ----Form Elements----- */
+.contact-form{
+    font-family: var(--secondary-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 50%;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 1em;
+    background-color: var(--secondary-color);
+}
+.contact-form h3{
+    text-align: center;
+}
+input{
+    height: 2em;
+    border-radius: 1em;
+    border: 1px solid white;
+    margin-bottom:1.5em;
+}
+textarea{
+    height:10em;
+    max-width: 100%;
+    border-radius: 1em;
+    border:1px solid black;
+    padding:1em;
+    margin-bottom: 1.5em;
+}
+button[type="submit"]{
+    color:white;
+    height:5em;
+    width: 15em;
+    margin:0 auto;
+    background-color: var(--accent-color2);
+    border-radius: 1em;
+    border: 1px solid var(--accent-color);
+}
+button[type="submit"]:hover{
+    background-color: var(--accent-color);
+}
+
+/* ------------------Effects----------------------- */
+.frosted{
+    background: rgba(255, 255, 255, 0.397);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    -moz-backdrop-filter:blur(14px);
+    -o-backdrop-filter: blur(3px);
+    -ms-backdrop-filter: blur(3px)
+}
+.drop-shadow{
+    box-shadow: .5em .5em 1em 1em hsla(0, 0%, 14%, 0.452);
+}
+.typing-animation{
+    font-family: var(--secondary-font);
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typing 2.5s steps(30, end),
+      blink-caret .75s step-end infinite;
+}
+
+/* ------------------Animations----------------------- */
+@keyframes typing {
+    from {
+        width: 0 
+    }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+@keyframes FadeIn{
+    0%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+/* ------------------Media Query----------------------- */
