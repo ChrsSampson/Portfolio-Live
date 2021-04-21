@@ -7,14 +7,15 @@
     --primary-font:'Raleway', sans-serif;
     --secondary-font:'Fira Code', monospace;
 
-    --primary-color: hsl(359, 23%, 51%);
-    --secondary-color:rgb(27, 117, 161);
+    --primary-color: hsl(19, 23%, 51%);
+    --secondary-color:rgb(10, 34, 65);
     --accent-color:hsl(0, 0%, 65%);
     --accent-color2: hsl(16, 13%, 28%);
 }
 body{
     margin:0px;
     font-family:var(--primary-font);
+    background-color: var(--accent-color2);
 }
 
 /* ------------------Class Styles----------------------- */
@@ -35,12 +36,7 @@ body{
     height:100vh;
     margin-bottom: 0px;
 }
-footer{
-    position: relative;
-    bottom: -12em;
-    height:10em;
-    background-color: wheat;
-}
+
 /* ------------------Containers----------------------- */
 .landing{
     display: flex;
@@ -51,20 +47,26 @@ footer{
     background-position: center;
     background-size: cover;
 }
-.projects{
-    background-color: var(--primary-color);
+.about-wrapper, .project-wrapper{
+  position: relative;
+  top:-100%;
+  padding: 1em 2.5em;    
+  min-height:100vh;  
 }
-.about{
-    background-color: var(--secondary-color);
+.about-wrapper, .project-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .contact{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    background-image:url(./img/math-6GDW9BVdmkw-unsplash.jpg);
+    background-image: url(./img/Wood.jpg);
     background-position: center;
-    background-size:cover;   
+    background-size: cover;
+    /* background-color: var(--secondary-color); */
 }
 .nav-bar{
     margin:0 auto;
@@ -82,6 +84,29 @@ footer{
     border-radius: 1em;
     padding:1em;  
 }
+.bio-container, .skills-container{
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.52);
+    margin:1em auto;
+    width: 95%;
+    padding:1em;
+}
+.bio-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15em;
+        
+}
+.skills-container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.slides{
+    max-width: 90%;
+    margin: 0 auto;
+}
 /* ------------------Components----------------------- */
 /* ----Anchor Elements----- */
 .nav-link-light{
@@ -90,6 +115,7 @@ footer{
     border-radius:1em;
     padding:.25em;
     cursor: pointer;
+    text-decoration: none;
 }
 .nav-link-light:hover{
     background-color:hsla(0, 0%, 100%, 0.37);
@@ -124,17 +150,42 @@ footer{
     height: 1em;
 }
 
+/* ----Project Cards Elements----- */
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:1.5em;
+    border-radius: 1em;
+    border: 1px solid black;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:.5em;
+}
+.card-buttons{
+    margin-top:2.5em;
+}
+.card-img{
+    margin-top: 2em;
+    height: 20em;
+    width: 20em;
+}
+
 /* ----Form Elements----- */
 .contact-form{
-    font-family: var(--secondary-font);
+    color: white;
+    font-family: var(--primary-font);
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-width: 50%;
     margin: 0 auto;
     padding: 2em;
-    border-radius: 1em;
-    background-color: var(--secondary-color);
+    border: .25em solid white;
 }
 .contact-form h3{
     text-align: center;
@@ -144,6 +195,7 @@ input{
     border-radius: 1em;
     border: 1px solid white;
     margin-bottom:1.5em;
+    font-family: var(--secondary-font);
 }
 textarea{
     height:10em;
@@ -152,11 +204,13 @@ textarea{
     border:1px solid black;
     padding:1em;
     margin-bottom: 1.5em;
+    font-family: var(--secondary-font);
 }
 button[type="submit"]{
     color:white;
     height:5em;
     width: 15em;
+    font-size: 1em;
     margin:0 auto;
     background-color: var(--accent-color2);
     border-radius: 1em;
@@ -165,7 +219,59 @@ button[type="submit"]{
 button[type="submit"]:hover{
     background-color: var(--accent-color);
 }
+/* ----list Elements----- */
+.list{
+    text-align: center;
+}
+ul{
+    text-align: left;
+    list-style-type: none;
+    text-decoration: none;
+}
+ul > li{
+    padding:.25em;
+}
+.skills-container:first-child{
+    border-right:1px solid black;
+}
+/* ---------Misc----------- */
+.about-background{
+    height: 100vh;
+    background-image: url(./img/Waterfall.jpg);
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -o-filter: blur(4px);
+    filter: blur(4px);
+}
+.project-background{
+    height: 100vh;
+    background-image: url(./img/octavian-dan-b21Ty33CqVs-unsplash.jpg);
+    background-position:center;
+    background-size: cover;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -o-filter: blur(4px);
+    filter: blur(10px);
+}
 
+/* ----TypoGraphy----- */
+p{
+    max-width: clamp(50%, 70%, 80%);
+}
+.bio-container p{
+    padding: 1em;
+    border-left: 1px solid black
+}
+.contact-form h3{
+    margin-top: 0px;
+}
+.project-wrapper h2{
+    text-align: center;
+}
 /* ------------------Effects----------------------- */
 .frosted{
     background: rgba(255, 255, 255, 0.397);
@@ -176,7 +282,7 @@ button[type="submit"]:hover{
     -ms-backdrop-filter: blur(3px)
 }
 .drop-shadow{
-    box-shadow: .5em .5em 1em 1em hsla(0, 0%, 14%, 0.452);
+    box-shadow: .5em .5em 1em 1em hsla(0, 0%, 3%, 0.452);
 }
 .typing-animation{
     font-family: var(--secondary-font);

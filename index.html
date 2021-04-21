@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./js/slick/slick.css">
+    <link rel="stylesheet" href="./js/slick/slick-theme.css">
     <link rel="stylesheet" href="style.css">
     <title>Chris Sampson Portfolio</title>
 </head>
@@ -26,29 +28,66 @@
         </section>
 
         <section class="scroll-container about">
-            <article>
-                <h3>About Me</h3>
-                <p>This will be some text about me</p>
-            </article>
+            <div class="about-background"></div>
+            <div class="about-wrapper">
+                <article class="bio-container drop-shadow">
+                    <h2>About Me</h2>
+                    <p>My name is Chris. I have around 10 years of experience as a System and Network Administrator planning, implementing, and even building tools and systems to improve company workflows. I am currently pursueing a position as a Web Developer following my completion of the Team Treehouse Front End Development Tech Degree. I have am also currently working on other personal projects to practice and improve my skills. Below you can see some of my favorite tools.</p>
+                </article>
+                <article class="skills-container drop-shadow">
+                    <div class="list">
+                        <h3>My Tools</h3>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>Adobe PhotoShop</li>
+                            <li>Github</li>
+                            <li>NPM</li>
+                            <li>Terminal</li>
+                            <li>Codepen</li>
+                            <li>☕</li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <h3>Languages I Speak</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                            <li>PUG / HandleBar</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>PowerShell</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="scroll-container projects">
-            <h3>Projects</h3>
+            <div class="project-background"></div>
+            <div class="project-wrapper">
+                <h2>Projects</h2>
+                <article class="slides">
+
+                </article>
+            </div>
         </section>
 
         <section class="scroll-container contact">
             <form class="contact-form drop-shadow">
-                <h3>Contact Me</h3>
+                <h3>Let's Have Coffee</h3>
                 <input type="text" placeholder="Enter Your Name">
                 <input type="text" placeholder="Enter Your Email">
                 <textarea placeholder="Enter Your Message Here"></textarea>
                 <button type="submit">Send</button>
             </form>
-            <footer class="drop-shadow">
-                <h3>This is the footer</h3>
-            </footer>
         </section>
     </main>
-<script src="app.js"></script>
+<!-- JQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<!-- Slick -->
+<script src="./js/slick/slick.min.js"></script>
+<!-- App -->
+<script src="./js/app.js"></script>
 </body>
 </html>
